@@ -10,7 +10,7 @@ class PlogConan(ConanFile):
         self.run("cd plog && git checkout tags/" + self.version)
 
     def package(self):
-        self.copy("*.h", src="plog/include", dst="include/plog")   #xxx: changes here
+        self.copy("*.h", src="plog/include", dst="include/")   #xxx: changes here
 
     def package_id(self):
         self.info.header_only()
